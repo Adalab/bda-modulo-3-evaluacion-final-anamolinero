@@ -20,6 +20,8 @@
         - Los nulos de Salary también puede ser porque no tengan trabajo o estén estudiando. Se comprueba si los valores únicos de los Nan de Salary corresponden a College y así es.
 
         *Nulos de Salary: los nulos representan el 25.32% de los datos, por lo que según lo que hemos estudiado en las imputaciones numéricas es una cantidad grande, por lo que deberíamos usar KNNImputer (regresión) o IterativeImputer (vecinos), no la media (además al coincidir los datos faltantes con el mismo tipo de estudios la media no sería real porque la sacaríamos de otros niveles de estudios).
+        Habría que ver cuál de los dos modifica menos los datos estadísticos.
+        Al ser un porcentaje tan alto y que coincide con un mismo tipo de nivel de estudio se recomienda comprobar con la empresa si es un error al registrar este dato.
 
     2. Hacemos un bucle para buscar los valores únicos y así ver inconsistencias o errores tipográficos.
         - En df_clientes __Country__ solo tiene un valor único, se podría eliminar la columna si la empresa solo tuviera clientes de ese país, pero puede que busque ampliar los países.
